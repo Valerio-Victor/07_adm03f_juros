@@ -1,0 +1,406 @@
+---
+title: 'TAXA DE JUROS </br> (AULA 07)'
+subtitle: 'ADM03F - Macroeconomia'
+author: 'Autor: Victor Valerio'
+date: 'Última atualização: `r format(Sys.Date(),"%d-%m-%Y")`'
+output:
+  xaringan::moon_reader:
+    css: [xaringan-themer.css]
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      ratio: 16:9
+      countIncrementalSlides: true
+---
+
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+
+
+library(xaringanthemer)
+
+
+style_mono_light(base_color = '#23395b')
+
+
+```
+
+
+```{r , echo=FALSE}
+ 
+
+xaringanExtra::use_scribble()
+
+
+xaringanExtra::use_search(show_icon = TRUE)
+
+
+```
+
+## TÓPICOS ABORDADOS
+
+</br>
+
+- [**MATEMÁTICA FINANCEIRA**](#matematicafinanceira)
+
+</br>
+
+- [**TAXAS DE JUROS IMPORTANTES**](#taxadejurosimportantes)
+
+</br>
+
+- [**CONCEITO DE SPREAD BANCÁRIO**](#spreadbancaria)
+
+
+
+
+---
+class: inverse, center, middle 
+name: matematicafinanceira
+
+## REVISÃO: MATEMÁTICA FINANCEIRA
+
+
+
+---
+<div style="text-align: justify">
+
+## REVISÃO: MATEMÁTICA FINANCEIRA
+
+</br>
+
+- Os juros capitalizados de maneira simples (**juros simples**) correspondem ao rendimento futuro 
+gerados a partir da **incidência** apenas sobre o **principal** (capital inicial) associado:
+
+</br>
+
+$$J_n = P . i . n$$
+$J_n$ = Juros gerados em _n_ períodos
+
+$𝑃$ = Principal (capital inicial);
+
+$𝑖$ = Taxa de Juros;
+
+$𝑛$ = Número de Períodos.
+
+
+
+
+---
+<div style="text-align: justify">
+
+## REVISÃO: MATEMÁTICA FINANCEIRA
+
+</br>
+
+- O valor total obtido após o período de rendimento é chamado de **valor futuro (VF)**. No caso do 
+juros simples, tem-se:
+
+</br>
+
+$$VF_n = P + J_n$$
+</br>
+
+$$VF_n = P + P.i.n$$
+$VF_n$ = Valor Futuro após _n_ períodos.
+
+</br>
+
+- **Obs.**: Os juros simples quase não são utilizados na prática.
+
+
+
+
+---
+<div style="text-align: justify">
+
+## REVISÃO: MATEMÁTICA FINANCEIRA
+
+
+- Por sua vez, os juros capitalizados de maneira composta (**juros compostos**) correspondem ao rendimento
+futuro que incide sobre o **principal** (capital inicial) empregado acrescido dos juros até o período 
+anterior:
+
+</br>
+
+$$VF_1 = P+P.i = P(1+i)$$
+
+</br>
+
+$$VF_2 = VF_1+VF_1.i = P(1+i)^2$$
+
+</br>
+
+$$VF_3 = VF_2+VF_2.i = P(1+i)^3$$
+
+</br>
+
+$$VF_n = VF_{n-1}+VF_{n-1}.i = P(1+i)^n$$
+
+
+---
+<div style="text-align: justify">
+
+## RELAÇÃO COM MACROECONOMIA
+
+</br>
+
+- Com esta pequena revisão de matemática financeira já é possível realizar uma associação com o 
+conceito de taxa de juros. Como visto, como os valores nominais representam poder de compra em 
+períodos diferentes é necessário realizar uma correção da série;
+
+</br>
+
+- De fato, toda vez que estamos interessados em avaliar a variação de uma série monetária é 
+necessário realizar esta correção monetária (**deflacionar a série**).
+
+</br>
+
+- Isto nada mais é que um exercício simples de matemática financeira (ao se considerar o regime de 
+capitalização composta).
+
+</br>
+
+
+---
+<div style="text-align: justify">
+
+## RELAÇÃO COM MACROECONOMIA
+
+</br>
+
+- **EXEMPLO**: Quando queremos avaliar as variações no PIB, na realidade, queremos obter um indicador 
+de variação na renda (sendo necessário retirar o efeito das alterações de preço). Caso contrário, 
+poderíamos ser induzidos ao erro de compreender que quanto maior à inflação, maior à renda.
+
+</br>
+
+$$ Produto \ Agregado = \sum_{x = 1}^{n}P_iQ_i$$
+
+
+---
+<div style="text-align: justify">
+
+## RELAÇÃO COM MACROECONOMIA
+
+**EXEMPLO DE SÉRIE DEFLACIONADA**
+
+```{r , results = 'asis', echo = F, warning = F, message = F, error = F, fig.align ='center', out.width = '100%'}
+
+
+library(magrittr)
+
+
+library(kableExtra)
+
+
+cronograma <- data.frame(
+  
+  a = c('TRIGO', 'FARINHA', 'PÃO'),
+  
+  b = c('R$ 0', 'R$ 15', 'R$ 15'),
+  
+  c = c('R$ 15', 'R$ 35', 'R$ 60'),
+  
+  d = c('R$ 15', 'R$ 20', 'R$ 25'))
+
+knitr::kable(cronograma, 
+             
+             escape = FALSE,
+    
+             format = 'html',
+             
+             col.names = c('PRODUTO', 'PREÇO DO INSUMO (custo de produção)', 
+                           
+                           'PREÇO DO PRODUTO (preço de venda)', 
+                           
+                           'VALOR ADICIONADO (valor agregado)'),
+             
+             align = c('c', 'c', 'c', 'c')) %>%
+  
+  kable_styling(bootstrap_options = 'striped')
+  
+
+```
+
+
+---
+class: inverse, center, middle 
+name: taxadejurosimportantes
+
+## TAXAS DE JUROS IMPORTANTES
+
+---
+<div style="text-align: justify">
+
+
+---
+class: inverse, center, middle 
+name: taxadejurosimportantes
+
+## CONCEITO DE SPREAD BANCÁRIO
+
+---
+<div style="text-align: justify">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+
+## O BRASIL EM PERSPECTIVA
+
+
+```{r, warning = F,message = F, error = F, echo = F, fig.align = 'center', dpi = 300}
+
+
+
+
+# library(magrittr, include.only = '%>%')
+# 
+# 
+# 
+# 
+# ipca_ts <- sidrar::get_sidra(api = '/t/1737/n1/all/v/63,69,2266/p/all/d/v63%202,v69%202,v2266%2013') %>%
+# 
+#   janitor::clean_names()
+# 
+# 
+# 
+# 
+# acum_ano <- ipca_ts %>%
+# 
+#   dplyr::filter(variavel == 'IPCA - Variação acumulada no ano') %>%
+# 
+#   dplyr::transmute(data = zoo::as.yearmon(mes_codigo, format = '%Y %m'),
+# 
+#                    valor = round(valor, 6)) %>%
+# 
+#   dplyr::mutate(mes = lubridate::month(data)) %>%
+# 
+#   dplyr::filter(mes == 12) %>%
+# 
+#   dplyr::filter(data >= zoo::as.yearmon(1990, 01)) %>%
+#   
+#   dplyr::filter(data <= zoo::as.yearmon(2000, 01)) %>%
+# 
+#   dplyr::mutate(data = lubridate::year(data)) %>%
+# 
+#   dplyr::select(data, valor) %>% 
+#   
+#   dplyr::rename('Data' = data,
+#                 
+#                 'Valor' = valor) %>% 
+# 
+#   ggplot2::ggplot() +
+# 
+#   ggplot2::geom_line(mapping = ggplot2::aes(x = Data, y = Valor),
+# 
+#                      colour = '#23395b',
+# 
+#                      size = .5) +
+# 
+#   ggplot2::geom_point(mapping = ggplot2::aes(x = Data, y = Valor),
+# 
+#                       colour = '#23395b',
+#                       
+#                       size = .75) +
+#   
+#   ggplot2::scale_y_continuous(labels = scales::number_format(suffix = '%')) +
+#   
+#   ggplot2::scale_x_continuous(breaks = seq(1990, 2000, 2)) +
+#   
+#   ggplot2::labs(title = 'IPCA',
+#                 
+#                 x = 'Meses',
+#                 
+#                 y = 'Acumulado no Ano',
+#                 
+#                 caption = 'Dados: IBGE.') +
+#   
+#   xaringanthemer::theme_xaringan(text_font_size = 15,
+#                                  
+#                                  title_font_size = 20)
+# 
+# 
+# acum_ano  <- plotly::ggplotly(acum_ano)
+# 
+# 
+# widgetframe::frameWidget(acum_ano, width = '100%', height = '100%')
+
+
+```
+
+
+
+
+
+
