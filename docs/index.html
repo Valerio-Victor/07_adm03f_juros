@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>TAXA DE JUROS  (AULA 07)</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Autor: Victor Valerio" />
+    <script src="index_files/header-attrs-2.8/header-attrs.js"></script>
+    <script src="index_files/fabric-4.3.1/fabric.min.js"></script>
+    <link href="index_files/xaringanExtra-scribble-0.0.1/scribble.css" rel="stylesheet" />
+    <script src="index_files/xaringanExtra-scribble-0.0.1/scribble.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#FF0000"],"pen_size":3,"eraser_size":30}) })</script>
+    <script src="index_files/mark.js-8.11.1/mark.min.js"></script>
+    <link href="index_files/xaringanExtra-search-0.0.1/search.css" rel="stylesheet" />
+    <script src="index_files/xaringanExtra-search-0.0.1/search.js"></script>
+    <script>window.addEventListener('load', function() { window.xeSearch = new RemarkSearch({"position":"bottom-left","caseSensitive":false,"showIcon":true,"autoSearch":true}) })</script>
+    <script src="index_files/kePrint-0.0.1/kePrint.js"></script>
+    <link href="index_files/lightable-0.0.1/lightable.css" rel="stylesheet" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# TAXA DE JUROS </br> (AULA 07)
+## ADM03F - Macroeconomia
+### Autor: Victor Valerio
+### Última atualização: 23-06-2021
+
+---
+
+
+
+
+
+
+
+
+## TÓPICOS ABORDADOS
+
+&lt;/br&gt;
+
+- [**MATEMÁTICA FINANCEIRA**](#matematicafinanceira)
+
+&lt;/br&gt;
+
+- [**TAXAS DE JUROS IMPORTANTES**](#taxadejurosimportantes)
+
+&lt;/br&gt;
+
+- [**CONCEITO DE SPREAD BANCÁRIO**](#spreadbancaria)
+
+
+
+
+---
+class: inverse, center, middle 
+name: matematicafinanceira
+
+## REVISÃO: MATEMÁTICA FINANCEIRA
+
+
+
+---
+&lt;div style="text-align: justify"&gt;
+
+## REVISÃO: MATEMÁTICA FINANCEIRA
+
+&lt;/br&gt;
+
+- Os juros capitalizados de maneira simples (**juros simples**) correspondem ao rendimento futuro 
+gerados a partir da **incidência** apenas sobre o **principal** (capital inicial) associado:
+
+&lt;/br&gt;
+
+`$$J_n = P . i . n$$`
+`\(J_n\)` = Juros gerados em _n_ períodos
+
+`\(𝑃\)` = Principal (capital inicial);
+
+`\(𝑖\)` = Taxa de Juros;
+
+`\(𝑛\)` = Número de Períodos.
+
+
+
+
+---
+&lt;div style="text-align: justify"&gt;
+
+## REVISÃO: MATEMÁTICA FINANCEIRA
+
+&lt;/br&gt;
+
+- O valor total obtido após o período de rendimento é chamado de **valor futuro (VF)**. No caso do 
+juros simples, tem-se:
+
+&lt;/br&gt;
+
+`$$VF_n = P + J_n$$`
+&lt;/br&gt;
+
+`$$VF_n = P + P.i.n$$`
+`\(VF_n\)` = Valor Futuro após _n_ períodos.
+
+&lt;/br&gt;
+
+- **Obs.**: Os juros simples quase não são utilizados na prática.
+
+
+
+
+---
+&lt;div style="text-align: justify"&gt;
+
+## REVISÃO: MATEMÁTICA FINANCEIRA
+
+
+- Por sua vez, os juros capitalizados de maneira composta (**juros compostos**) correspondem ao rendimento
+futuro que incide sobre o **principal** (capital inicial) empregado acrescido dos juros até o período 
+anterior:
+
+&lt;/br&gt;
+
+`$$VF_1 = P+P.i = P(1+i)$$`
+
+&lt;/br&gt;
+
+`$$VF_2 = VF_1+VF_1.i = P(1+i)^2$$`
+
+&lt;/br&gt;
+
+`$$VF_3 = VF_2+VF_2.i = P(1+i)^3$$`
+
+&lt;/br&gt;
+
+`$$VF_n = VF_{n-1}+VF_{n-1}.i = P(1+i)^n$$`
+
+
+---
+&lt;div style="text-align: justify"&gt;
+
+## RELAÇÃO COM MACROECONOMIA
+
+&lt;/br&gt;
+
+- Com esta pequena revisão de matemática financeira já é possível realizar uma associação com o 
+conceito de taxa de juros. Como visto, como os valores nominais representam poder de compra em 
+períodos diferentes é necessário realizar uma correção da série;
+
+&lt;/br&gt;
+
+- De fato, toda vez que estamos interessados em avaliar a variação de uma série monetária é 
+necessário realizar esta correção monetária (**deflacionar a série**).
+
+&lt;/br&gt;
+
+- Isto nada mais é que um exercício simples de matemática financeira (ao se considerar o regime de 
+capitalização composta).
+
+&lt;/br&gt;
+
+
+---
+&lt;div style="text-align: justify"&gt;
+
+## RELAÇÃO COM MACROECONOMIA
+
+&lt;/br&gt;
+
+- **EXEMPLO**: Quando queremos avaliar as variações no PIB, na realidade, queremos obter um indicador 
+de variação na renda (sendo necessário retirar o efeito das alterações de preço). Caso contrário, 
+poderíamos ser induzidos ao erro de compreender que quanto maior à inflação, maior à renda.
+
+&lt;/br&gt;
+
+$$ Produto \ Agregado = \sum_{x = 1}^{n}P_iQ_i$$
+
+
+---
+&lt;div style="text-align: justify"&gt;
+
+## RELAÇÃO COM MACROECONOMIA
+
+**EXEMPLO DE SÉRIE DEFLACIONADA**
+
+&lt;table class="table table-striped" style="margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:center;"&gt; PRODUTO &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; PREÇO DO INSUMO (custo de produção) &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; PREÇO DO PRODUTO (preço de venda) &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; VALOR ADICIONADO (valor agregado) &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; TRIGO &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; R$ 0 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; R$ 15 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; R$ 15 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; FARINHA &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; R$ 15 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; R$ 35 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; R$ 20 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; PÃO &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; R$ 15 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; R$ 60 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; R$ 25 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+---
+class: inverse, center, middle 
+name: taxadejurosimportantes
+
+## TAXAS DE JUROS IMPORTANTES
+
+---
+&lt;div style="text-align: justify"&gt;
+
+
+---
+class: inverse, center, middle 
+name: taxadejurosimportantes
+
+## CONCEITO DE SPREAD BANCÁRIO
+
+---
+&lt;div style="text-align: justify"&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+
+## O BRASIL EM PERSPECTIVA
+
+
+
+
+
+
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"ratio": "16:9",
+"countIncrementalSlides": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
