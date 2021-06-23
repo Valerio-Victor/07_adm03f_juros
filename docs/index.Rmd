@@ -183,7 +183,7 @@ $$ Produto \ Agregado = \sum_{x = 1}^{n}P_iQ_i$$
 
 ## RELAÇÃO COM MACROECONOMIA
 
-</br>
+
 
 **EXEMPLO DE SÉRIE DEFLACIONADA**
 
@@ -202,11 +202,11 @@ cronograma <- data.frame(
   
   a = c('Jan - 2021', 'Fev - 2021', 'Mar - 2021', 'Abr - 2021', 'Mai - 2021', 'Jun - 2021'),
   
-  b = c('0,8%', '0,12%', '0,9%', '0,4%', '0,61%', '0,14%'),
+  b = c('', '0,12%', '0,9%', '0,4%', '0,61%', '0,14%'),
   
   c = c('R$ 15', 'R$ 35', 'R$ 60', 'R$ 42', 'R$ 38', 'R$ 12'),
   
-  d = c('R$ 15', 'R$ 20', 'R$ 25', 'R$ 15', 'R$ 20', 'R$ 25'))
+  d = c('R$ 15,33', 'R$ 35,72', 'R$ 60,69', 'R$ 42,32', 'R$ 38,05', 'R$ 12,00'))
 
 knitr::kable(cronograma, 
              
@@ -214,7 +214,7 @@ knitr::kable(cronograma,
     
              format = 'html',
              
-             col.names = c('Data', 'Inflação Mensal', 
+             col.names = c('Data', 'Taxa de Inflação', 
                            
                            'Série Original', 'Série Deflacionada'),
              
@@ -225,6 +225,12 @@ knitr::kable(cronograma,
 
 ```
 
+</br>
+
+- Valores à preços de junho de 2021.
+
+
+
 
 ---
 class: inverse, center, middle 
@@ -232,8 +238,79 @@ name: taxadejurosimportantes
 
 ## TAXAS DE JUROS IMPORTANTES
 
+
+
+
 ---
 <div style="text-align: justify">
+
+## TAXAS DE JUROS IMPORTANTES
+
+</br>
+
+- Existem diversas taxas de juros no Brasil. Entretanto, pode-se dizer a grosso modo que duas delas 
+são especialmente importantes.
+
+</br>
+
+- A **Taxa de Juros básica da economia brasileira (Selic)**;
+
+</br>
+
+- A **Taxa de Depósito Interbancário (DI)**.
+  
+  
+  
+  
+---
+<div style="text-align: justify">
+
+## TAXAS DE JUROS IMPORTANTES
+  
+</br>
+
+- A taxa SELIC (Sistema Especial de Liquidação e Custódia) é entendida como taxa básica de juros 
+pois:
+
+</br>
+
+- Corresponde a taxa que remunera os títulos públicos (ou seja, representa a rentabilidade dos 
+títulos públicos);
+
+</br>
+
+- É o principal instrumento de política monetária do Banco Central do Brasil (BACEN) – Taxa de 
+redesconto;
+
+</br>
+
+- Ela é definida a cada 45 dias na reunião do COPOM (Comitê de Política Monetária).
+
+
+
+  
+---
+<div style="text-align: justify">
+
+## TAXAS DE JUROS IMPORTANTES
+  
+</br>
+  
+  
+- Em associação, os bancos usam a informação da Taxa SELIC para formarem uma outra taxa de juros 
+(denominada de DI);
+
+</br>
+
+- Ao final do dia os bancos precisam “zerar” os respectivos caixas dado que o volume de recebimentos 
+não é igual ao volume de pagamentos;
+
+</br>
+
+- Com isso há uma “troca de caixas” entre os bancos e a taxa do DI é a referência para estas 
+operações.
+ 
+
 
 
 ---
@@ -242,164 +319,125 @@ name: taxadejurosimportantes
 
 ## CONCEITO DE SPREAD BANCÁRIO
 
+
+
+
 ---
 <div style="text-align: justify">
 
+## CONCEITO DE SPREAD BANCÁRIO
 
+</br>
 
+- Os bancos são chamados de intermediários financeiros, isto é, eles captam recursos de agentes 
+superavitários e realocam para agentes deficitários através de suas operações de crédito;
 
+</br>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- Por isso os bancos são instituições importantes, eles viabilizam os investimentos aumentando a 
+produção de uma determinada economia.
 
 
 
 ---
+<div style="text-align: justify">
 
+## CONCEITO DE SPREAD BANCÁRIO
 
-## O BRASIL EM PERSPECTIVA
-
-
-```{r, warning = F,message = F, error = F, echo = F, fig.align = 'center', dpi = 300}
-
+```{r, echo = F, warning = F, message = F, error = F, out.width= '80%', fig.align = 'center'}
 
 
 
-# library(magrittr, include.only = '%>%')
-# 
-# 
-# 
-# 
-# ipca_ts <- sidrar::get_sidra(api = '/t/1737/n1/all/v/63,69,2266/p/all/d/v63%202,v69%202,v2266%2013') %>%
-# 
-#   janitor::clean_names()
-# 
-# 
-# 
-# 
-# acum_ano <- ipca_ts %>%
-# 
-#   dplyr::filter(variavel == 'IPCA - Variação acumulada no ano') %>%
-# 
-#   dplyr::transmute(data = zoo::as.yearmon(mes_codigo, format = '%Y %m'),
-# 
-#                    valor = round(valor, 6)) %>%
-# 
-#   dplyr::mutate(mes = lubridate::month(data)) %>%
-# 
-#   dplyr::filter(mes == 12) %>%
-# 
-#   dplyr::filter(data >= zoo::as.yearmon(1990, 01)) %>%
-#   
-#   dplyr::filter(data <= zoo::as.yearmon(2000, 01)) %>%
-# 
-#   dplyr::mutate(data = lubridate::year(data)) %>%
-# 
-#   dplyr::select(data, valor) %>% 
-#   
-#   dplyr::rename('Data' = data,
-#                 
-#                 'Valor' = valor) %>% 
-# 
-#   ggplot2::ggplot() +
-# 
-#   ggplot2::geom_line(mapping = ggplot2::aes(x = Data, y = Valor),
-# 
-#                      colour = '#23395b',
-# 
-#                      size = .5) +
-# 
-#   ggplot2::geom_point(mapping = ggplot2::aes(x = Data, y = Valor),
-# 
-#                       colour = '#23395b',
-#                       
-#                       size = .75) +
-#   
-#   ggplot2::scale_y_continuous(labels = scales::number_format(suffix = '%')) +
-#   
-#   ggplot2::scale_x_continuous(breaks = seq(1990, 2000, 2)) +
-#   
-#   ggplot2::labs(title = 'IPCA',
-#                 
-#                 x = 'Meses',
-#                 
-#                 y = 'Acumulado no Ano',
-#                 
-#                 caption = 'Dados: IBGE.') +
-#   
-#   xaringanthemer::theme_xaringan(text_font_size = 15,
-#                                  
-#                                  title_font_size = 20)
-# 
-# 
-# acum_ano  <- plotly::ggplotly(acum_ano)
-# 
-# 
-# widgetframe::frameWidget(acum_ano, width = '100%', height = '100%')
+knitr::include_graphics('fig1.png', dpi = 300)
+
 
 
 ```
+
+
+---
+<div style="text-align: justify">
+
+## CONCEITO DE SPREAD BANCÁRIO
+
+</br>
+
+- Quando os bancos realizam operações de captação eles pagam juros aos agentes superavitários (para 
+estimular que a operação seja realizada);
+
+</br>
+
+- De outro lado, quando os bancos emprestam dinheiro eles cobram juros (devido ao pagamento de custos 
+administrativos, lucro e risco).
+
+</br>
+
+- Obviamente, os juros pagos pelos bancos nas operações de captação são menores que os juros cobrados 
+nas operações de empréstimos. Esta diferença entre taxas é chamada de spread bancário.  
+
+
+---
+<div style="text-align: justify">
+
+## CONCEITO DE SPREAD BANCÁRIO
+
+```{r, echo = F, warning = F, message = F, error = F, out.width= '80%', fig.align = 'center'}
+
+
+
+knitr::include_graphics('fig2.png', dpi = 300)
+
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
