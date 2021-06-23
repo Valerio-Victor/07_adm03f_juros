@@ -183,7 +183,11 @@ $$ Produto \ Agregado = \sum_{x = 1}^{n}P_iQ_i$$
 
 ## RELAÇÃO COM MACROECONOMIA
 
+</br>
+
 **EXEMPLO DE SÉRIE DEFLACIONADA**
+
+</br>
 
 ```{r , results = 'asis', echo = F, warning = F, message = F, error = F, fig.align ='center', out.width = '100%'}
 
@@ -196,13 +200,13 @@ library(kableExtra)
 
 cronograma <- data.frame(
   
-  a = c('TRIGO', 'FARINHA', 'PÃO'),
+  a = c('Jan - 2021', 'Fev - 2021', 'Mar - 2021', 'Abr - 2021', 'Mai - 2021', 'Jun - 2021'),
   
-  b = c('R$ 0', 'R$ 15', 'R$ 15'),
+  b = c('0,8%', '0,12%', '0,9%', '0,4%', '0,61%', '0,14%'),
   
-  c = c('R$ 15', 'R$ 35', 'R$ 60'),
+  c = c('R$ 15', 'R$ 35', 'R$ 60', 'R$ 42', 'R$ 38', 'R$ 12'),
   
-  d = c('R$ 15', 'R$ 20', 'R$ 25'))
+  d = c('R$ 15', 'R$ 20', 'R$ 25', 'R$ 15', 'R$ 20', 'R$ 25'))
 
 knitr::kable(cronograma, 
              
@@ -210,11 +214,9 @@ knitr::kable(cronograma,
     
              format = 'html',
              
-             col.names = c('PRODUTO', 'PREÇO DO INSUMO (custo de produção)', 
+             col.names = c('Data', 'Inflação Mensal', 
                            
-                           'PREÇO DO PRODUTO (preço de venda)', 
-                           
-                           'VALOR ADICIONADO (valor agregado)'),
+                           'Série Original', 'Série Deflacionada'),
              
              align = c('c', 'c', 'c', 'c')) %>%
   
