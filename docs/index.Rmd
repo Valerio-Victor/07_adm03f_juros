@@ -344,11 +344,11 @@ produção de uma determinada economia.
 
 ## CONCEITO DE SPREAD BANCÁRIO
 
-```{r, echo = F, warning = F, message = F, error = F, out.width= '80%', fig.align = 'center'}
+```{r, echo = F, warning = F, message = F, error = F, out.width= '70%', fig.align = 'center'}
 
 
 
-knitr::include_graphics('fig1.png', dpi = 300)
+knitr::include_graphics('fig1.PNG', dpi = 300)
 
 
 
@@ -381,11 +381,11 @@ nas operações de empréstimos. Esta diferença entre taxas é chamada de sprea
 
 ## CONCEITO DE SPREAD BANCÁRIO
 
-```{r, echo = F, warning = F, message = F, error = F, out.width= '80%', fig.align = 'center'}
+```{r, echo = F, warning = F, message = F, error = F, out.width= '70%', fig.align = 'center'}
 
 
 
-knitr::include_graphics('fig2.png', dpi = 300)
+knitr::include_graphics('fig2.PNG', dpi = 300)
 
 
 
