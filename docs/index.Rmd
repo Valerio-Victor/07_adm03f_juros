@@ -340,11 +340,12 @@ produção de uma determinada economia.
 
 
 ---
+class: inverse
 <div style="text-align: justify">
 
 ## CONCEITO DE SPREAD BANCÁRIO
 
-```{r, echo = F, warning = F, message = F, error = F, out.width= '70%', fig.align = 'center'}
+```{r, echo = F, warning = F, message = F, error = F, out.width= '90%', fig.align = 'center'}
 
 
 
@@ -377,11 +378,12 @@ nas operações de empréstimos. Esta diferença entre taxas é chamada de sprea
 
 
 ---
+class: inverse
 <div style="text-align: justify">
 
 ## CONCEITO DE SPREAD BANCÁRIO
 
-```{r, echo = F, warning = F, message = F, error = F, out.width= '70%', fig.align = 'center'}
+```{r, echo = F, warning = F, message = F, error = F, out.width= '90%', fig.align = 'center'}
 
 
 
@@ -391,7 +393,21 @@ knitr::include_graphics('fig2.PNG', dpi = 300)
 
 ```
 
+---
+class: inverse
+<div style="text-align: justify">
 
+## IMPACTO DA SELIC NA INFLAÇÃO DE DEMANDA
+
+```{r, echo = F, warning = F, message = F, error = F, out.width= '90%', fig.align = 'center'}
+
+
+
+knitr::include_graphics('fig3.PNG', dpi = 300)
+
+
+
+```
 
 
 
